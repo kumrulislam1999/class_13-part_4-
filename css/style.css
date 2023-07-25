@@ -64,6 +64,7 @@ ul {
 a {
     display: inline-block;
     text-decoration: none;
+    color: var(--primary_font_color);
 }
 
 
@@ -310,6 +311,8 @@ img {
 #skillSection {
     padding-bottom: 100px;
     text-align: right;
+    background-color: var(--white_color);
+
 }
 
 #skillSection .row {
@@ -322,38 +325,56 @@ img {
 
 }
 
-#skillSection .sectionDetails .innerItem:first-child {
-    width: calc(90% - 65px);
-    padding-left: 65px;
-
+#skillSection .sectionDetails .inner_item_image {
+    width: 91px;
+    margin: 20px 0;
 }
 
-#skillSection .sectionDetails .innerItem:last-child img {
-    padding: 15px;
+#skillSection .sectionDetails .inner_item:first-child {
+    width: calc(100% - 91px);
+}
+
+#skillSection .sectionDetails .inner_item_image>img {
+    margin-left: auto;
+    box-shadow: 0 25px 60px 10px var(--shadow_color);
+}
+
+#skillSection .sectionDetails .progress {
+    position: relative;
     width: 100%;
-    border-radius: 50%;
-    box-shadow: -2px 5px 5px 10px #e2e2e2;
+    height: 10px;
+    background-color: #dddddd;
+    border-radius: 20px;
 }
 
-#skillSection .sectionDetails .innerItem progress {
-    width: 100%;
-    direction: rtl;
+#skillSection .sectionDetails .progress .progress_box {
+    width: 90%;
+    text-align: left;
+    height: 100%;
+    background-color: #2a4896;
+    margin-left: auto;
+    border-radius: 0 20px 20px 0;
 }
 
-#skillSection .sectionDetails .progressBar:nth-child(1) progress {
-    accent-color: #294795;
+#skillSection .sectionDetails .progress h3 {
+    position: absolute;
+    transform: translateY(-25px);
 }
 
-#skillSection .sectionDetails .progressBar:nth-child(2) progress {
-    accent-color: #5d3b15;
+#skillSection .sectionDetails .illustrator .progress_box {
+    background-color: #5d3b15;
+    width: 85%;
 }
 
-#skillSection .sectionDetails .progressBar:nth-child(3) progress {
-    accent-color: #33491f;
+#skillSection .sectionDetails .dreamweaver .progress_box {
+    background-color: #344a1f;
+    width: 75%;
 }
 
-#skillSection .sectionDetails .progressBar:nth-child(4) progress {
-    accent-color: #39295f;
+#skillSection .sectionDetails .after_effect .progress_box {
+    background-color: #392960;
+    width: 75%;
+
 }
 
 /* End Skill Section CSS Styling */
