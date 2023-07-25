@@ -432,11 +432,12 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #0f2f44;
+    background-color: var(--primary_font_color);
     height: 100%;
     width: 100%;
     text-align: center;
     display: none;
+    transition: 0.5s;
 }
 
 #serviceSection .item .overlay .position {
@@ -468,7 +469,7 @@ img {
 
 #serviceSection .item .overlay h3 {
     padding-bottom: 67px;
-    color: #ffffff;
+    color: var(--white_color);
 }
 
 #serviceSection .item:hover .overlay {
@@ -499,12 +500,8 @@ img {
 #portfolioSection .item {
     position: relative;
     width: calc((100% / 3) - 30px);
-    background-color: #fcfcfc;
+    background-color: var(--item_color);
     box-shadow: 0 0px 20px 10px var(--shadow_color);
-}
-
-#portfolioSection .item>img {
-    max-width: 100%;
 }
 
 #portfolioSection .item .overlay {
@@ -514,7 +511,9 @@ img {
     position: absolute;
     left: 0;
     bottom: 0;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
 }
 
 #portfolioSection .item:hover .overlay h4 {
@@ -522,16 +521,15 @@ img {
     font-weight: 500;
     padding: 33px 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--white_color);
 }
 
 #portfolioSection .item:hover .overlay {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+
 }
 
-#portfolioSection a:hover {
-    background-color: var(--btn_hover_color);
-}
 
 /* End Portfolio Section CSS styling */
 
@@ -567,13 +565,12 @@ img {
 }
 
 #testimonialSection .item .imageItem>img {
-    text-align: center;
-    max-width: 100%;
+    margin: auto;
     height: 100%;
 
 }
 
-#testimonialSection .item h3 {
+#testimonialSection .item h4 {
     padding-top: 34px;
 }
 
@@ -616,7 +613,7 @@ img {
 }
 
 #blogSection .sectionDetails .item>a {
-    padding: 0;
+    padding: 40;
 }
 
 #blogSection .item .overlay p,
@@ -661,17 +658,19 @@ img {
     display: block;
     position: absolute;
     left: 47%;
-    bottom: -100px;
+    bottom: -130px;
     background-color: transparent;
     border: none;
 }
 
 #blogSection button>i {
+    background-color: var(--white_color);
     width: 70px;
     height: 70px;
     font-size: 20px;
     line-height: 70px;
     text-align: center;
+    border-radius: 50%;
 }
 
 #blogSection .btn_h_shadow:hover {
