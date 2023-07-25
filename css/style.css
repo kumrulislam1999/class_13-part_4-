@@ -322,7 +322,12 @@ img {
 
 #skillSection .item>img {
     margin-left: -50px;
+    object-fit: cover;
 
+}
+
+#skillSection .sectionDetails {
+    padding-left: 62px;
 }
 
 #skillSection .sectionDetails .inner_item_image {
@@ -383,7 +388,7 @@ img {
 /* Start Service Section  CSS Styling*/
 #serviceSection {
     padding: 60px 0;
-    background-color: #f5f5f5;
+    background-color: var(--section_bg_color);
 }
 
 #serviceSection .row {
@@ -403,29 +408,24 @@ img {
 #serviceSection .item {
     position: relative;
     border-radius: 5px;
-    background-color: var(--item_color);
+    background-color: var(--item_bg_color);
 }
 
 #seviceSection .innerItem {
     padding: 30px 20px;
-    background-color: #0f2f44;
+
 }
 
 #serviceSection .innerItem:first-child {
-    width: 30%;
+    width: 100px;
     padding: 60px 20px;
     text-align: center;
 }
 
 #serviceSection .innerItem:last-child {
-    width: 70%;
+    width: calc(100% - 100px);
     padding: 30px 20px;
-    background-color: #eeeeee;
-}
-
-#serviceSection .innerItem img {
-
-    width: 100%;
+    background-color: var(--inner_item_bg_color);
 }
 
 #serviceSection .item .overlay {
